@@ -11,12 +11,12 @@ public class PostService : IPostService
         _postRepository = postRepository;
     }
 
-    public async Task<Post> GetPostByIdAsync(int id)
+    public async Task<Post?> GetPostByIdAsync(Guid id)
     {
         return await _postRepository.GetPostByIdAsync(id);
     }
 
-    public async Task<IEnumerable<Post>> GetPostsByAuthorIdAsync(int authorId)
+    public async Task<IEnumerable<Post>> GetPostsByAuthorIdAsync(Guid authorId)
     {
         return await _postRepository.GetPostsByAuthorIdAsync(authorId);
     }

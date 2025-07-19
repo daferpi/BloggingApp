@@ -1,7 +1,7 @@
 using BloggingApp.Domain.Entities;
 using BloggingApp.Domain.Repositories;
 using BloggingApp.Infrastructure.Data;
-using Microsoft.EntityFrameworkCore;
+
 public class PostRepository : IPostRepository
 {
     private readonly BlogDBContext _context;
@@ -9,13 +9,13 @@ public class PostRepository : IPostRepository
     {
         _context = context;
     }
-    public Task<Post> GetPostByIdAsync(int id)
+    public async Task<Post?> GetPostByIdAsync(Guid id)
     {
         // Logic to retrieve a post by ID
-        return _context.Posts.FirstOrDefaultAsync(p => p.Id == id);
+        return await _context.Posts.FindAsync(id);
     }
 
-    public Task<IEnumerable<Post>> GetPostsByAuthorIdAsync(int authorId)
+    public Task<IEnumerable<Post>> GetPostsByAuthorIdAsync(Guid authorId)
     {
         // Logic to retrieve posts by author ID
         return Task.FromResult(_context.Posts.Where(p => p.AuthorId == authorId).AsEnumerable());
