@@ -5,9 +5,14 @@ It follows the principles of DDD, Clean Architecture and testing.
 
 ## Steps to install and implement the project
 The first and most important thing is to install version 9 of the .NET SDK.
-1.- Clone the project on the local machine with the command ```git clone```
-2.- Enter the main ```BloggingApp``` project folder and run the ```dotnet build``` command.
-3.- Execute the command ```dotnet run --project BloggingApp.API```
-4.- Once confirmed that the server is working access the url ```http://localhost:{port}/swagger/index.html``` to know the details of the API and be able to execute the calls.
-5.- To pass the test suite, run the command ```dotnet test``` in the root folder of the project
+
+* Clone the project on the local machine with the command ```git clone```
+
+* Enter the main ```BloggingApp``` project folder and run the ```dotnet build``` command.
+
+* Execute the command ```dotnet run --project BloggingApp.API```
+
+* Once confirmed that the server is working access the url ```http://localhost:{port}/swagger/index.html``` to know the details of the API and be able to execute the calls.
+
+* To pass the test suite, run the command ```dotnet test``` in the root folder of the project
 
