@@ -1,4 +1,3 @@
-using System;
 using BloggingApp.Domain.Entities;
 using BloggingApp.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;

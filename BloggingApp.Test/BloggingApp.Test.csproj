@@ -28,6 +28,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BloggingApp.Domain\BloggingApp.Domain.csproj" />
     <ProjectReference Include="..\BloggingApp.Infrastructure\BloggingApp.Infrastructure.csproj" />
+    <ProjectReference Include="..\BloggingApp.API\BloggingApp.API.csproj" />
   </ItemGroup>
 
 </Project>

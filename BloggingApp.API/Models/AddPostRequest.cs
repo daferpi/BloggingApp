@@ -1,5 +1,3 @@
-using BloggingApp.Domain.Entities;
-
 public class AddPostRequest
 {   
     public string Title { get; set; } = string.Empty;
