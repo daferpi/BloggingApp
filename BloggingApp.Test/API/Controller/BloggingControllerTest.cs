@@ -36,7 +36,7 @@ public class BloggingControllerTest
         await _postRepository.AddPostAsync(post);
 
         // Act
-        var result = await _controller.GetPostById(postId);
+        var result = await _controller.GetPostById(postId, authorDetail: false);
 
         // Assert
         var okResult = Assert.IsType<OkObjectResult>(result);
@@ -53,11 +53,33 @@ public class BloggingControllerTest
         await _postRepository.AddPostAsync(post);
 
         // Act
-        var result = await _controller.GetPostById(nonExistentId);
+        var result = await _controller.GetPostById(nonExistentId, false);
 
         // Assert
         Assert.IsType<NotFoundResult>(result);
     }
+
+[Fact]
+    public async Task GetPostById_ShouldReturnPostWithAuthor_WhenAuthorDetailIsTrue()
+    {
+        // Arrange
+        var postId = Guid.NewGuid();
+        var authorId = Guid.NewGuid();
+        var post = new Post(postId, authorId, "Test Title", "Test Description", "Test Content")
+        {
+            Author = new Author(authorId, "Author Name", "Author Surname")
+        };
+        await _postRepository.AddPostAsync(post);
+        // Act
+        var result = await  _controller.GetPostById(postId, authorDetail: true);
+        // Assert
+        var okResult = Assert.IsType<OkObjectResult>(result);
+        var returnedPost = Assert.IsType<Post>(okResult.Value);
+        Assert.Equal(postId, returnedPost.Id);
+        Assert.NotNull(returnedPost.Author);
+        Assert.Equal(authorId, returnedPost.Author.Id);
+    }
+
     [Fact]
     public async Task AddPost_ShouldReturnCreated_WhenPostIsValid()
     {
@@ -102,37 +124,5 @@ public class BloggingControllerTest
             Author = new Author(authorId, "Author Name", "Author Surname")
         };
     }
-    [Fact]
-    public async Task GetPostsByAuthorId_ShouldReturnPostWithAuthor_WhenPostExists()
-    {
-        // Arrange
-        var postId = Guid.NewGuid();
-        var authorId = Guid.NewGuid();
-        var post = new Post(postId, authorId, "Test Title", "Test Description", "Test Content")
-        {
-            Author = new Author(authorId, "Author Name", "Author Surname")
-        };
-        await _postRepository.AddPostAsync(post);
-        // Act
-        var result = await _controller.GetPostsByAuthorId(postId);
-        // Assert
-        var okResult = Assert.IsType<OkObjectResult>(result);
-        var returnedPost = Assert.IsType<Post>(okResult.Value);
-        Assert.Equal(postId, returnedPost.Id);
-        Assert.NotNull(returnedPost.Author);
-        Assert.Equal(authorId, returnedPost.Author.Id);
-    }
-    [Fact]
-    public async Task GetPostsByAuthorId_ShouldReturnNotFound_WhenPostDoesNotExist()
-    {
-        // Arrange
-        var nonExistentId = Guid.NewGuid();
-        var post = new Post(Guid.NewGuid(), Guid.NewGuid(), "Test Title", "Test Description", "Test Content");
-        await _postRepository.AddPostAsync(post);
-       
-        // Act
-        var result = await _controller.GetPostsByAuthorId(nonExistentId);
-        // Assert
-        Assert.IsType<NotFoundResult>(result);
-    }
+    
 }

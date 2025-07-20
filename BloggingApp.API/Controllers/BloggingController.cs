@@ -14,9 +14,9 @@ public class BloggingController : ControllerBase
     }
 
     [HttpGet("posts/{id}")]
-    public async Task<IActionResult> GetPostById(Guid id)
+    public async Task<IActionResult> GetPostById(Guid id, [FromQuery(Name = "authorDetail")] bool? authorDetail)
     {
-        var post = await _postService.GetPostByIdAsync(id);
+        var post = authorDetail == false ? await _postService.GetPostByIdAsync(id) : await _postService.GetPostByIdWithAuthorDetailsAsync(id);
         if (post == null)
         {
             return NotFound();
@@ -24,16 +24,6 @@ public class BloggingController : ControllerBase
         return Ok(post);
     }
 
-    [HttpGet("posts/{id}/author")]
-    public async Task<IActionResult> GetPostsByAuthorId(Guid id)
-    {
-        var post = await _postService.GetPostByIdWithAuthorDetailsAsync(id);
-        if (post == null)
-        {
-            return NotFound();
-        }
-        return Ok(post);
-    }
     
     [HttpPost("post")]
     public async Task<IActionResult> AddPost([FromBody] AddPostRequest postRequest)
