@@ -1,0 +1,150 @@
+SF:/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Domain/Services/PostService.cs
+FN:8,System.Void PostService::.ctor(BloggingApp.Domain.Repositories.IPostRepository)
+FNDA:4,System.Void PostService::.ctor(BloggingApp.Domain.Repositories.IPostRepository)
+DA:9,4
+DA:10,4
+DA:11,4
+DA:12,4
+FN:24,System.Void PostService/<AddPostAsync>d__4::MoveNext()
+FNDA:0,System.Void PostService/<AddPostAsync>d__4::MoveNext()
+DA:25,0
+DA:26,0
+DA:27,0
+FN:14,System.Void PostService/<GetPostByIdAsync>d__2::MoveNext()
+FNDA:2,System.Void PostService/<GetPostByIdAsync>d__2::MoveNext()
+DA:15,2
+DA:16,2
+DA:17,2
+FN:19,System.Void PostService/<GetPostByIdWithAuthorDetailsAsync>d__3::MoveNext()
+FNDA:2,System.Void PostService/<GetPostByIdWithAuthorDetailsAsync>d__3::MoveNext()
+DA:20,2
+DA:21,2
+DA:22,2
+LF:13
+LH:10
+BRF:0
+BRH:0
+FNF:4
+FNH:3
+end_of_record
+SF:/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Domain/Entities/Author.cs
+FN:4,System.Guid BloggingApp.Domain.Entities.Author::get_Id()
+FNDA:5,System.Guid BloggingApp.Domain.Entities.Author::get_Id()
+DA:5,5
+FN:5,System.String BloggingApp.Domain.Entities.Author::get_Name()
+FNDA:3,System.String BloggingApp.Domain.Entities.Author::get_Name()
+DA:6,3
+FN:6,System.String BloggingApp.Domain.Entities.Author::get_Surname()
+FNDA:3,System.String BloggingApp.Domain.Entities.Author::get_Surname()
+DA:7,3
+FN:2,System.Void BloggingApp.Domain.Entities.Author::.ctor(System.Guid,System.String,System.String)
+FNDA:3,System.Void BloggingApp.Domain.Entities.Author::.ctor(System.Guid,System.String,System.String)
+DA:3,3
+LF:4
+LH:4
+BRF:0
+BRH:0
+FNF:4
+FNH:4
+end_of_record
+SF:/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Domain/Entities/Post.cs
+FN:4,System.Guid BloggingApp.Domain.Entities.Post::get_Id()
+FNDA:29,System.Guid BloggingApp.Domain.Entities.Post::get_Id()
+DA:5,29
+FN:5,System.Guid BloggingApp.Domain.Entities.Post::get_AuthorId()
+FNDA:13,System.Guid BloggingApp.Domain.Entities.Post::get_AuthorId()
+DA:6,13
+FN:6,System.String BloggingApp.Domain.Entities.Post::get_Title()
+FNDA:11,System.String BloggingApp.Domain.Entities.Post::get_Title()
+DA:7,11
+FN:7,System.String BloggingApp.Domain.Entities.Post::get_Description()
+FNDA:11,System.String BloggingApp.Domain.Entities.Post::get_Description()
+DA:8,11
+FN:8,System.String BloggingApp.Domain.Entities.Post::get_Content()
+FNDA:11,System.String BloggingApp.Domain.Entities.Post::get_Content()
+DA:9,11
+FN:10,BloggingApp.Domain.Entities.Author BloggingApp.Domain.Entities.Post::get_Author()
+FNDA:26,BloggingApp.Domain.Entities.Author BloggingApp.Domain.Entities.Post::get_Author()
+DA:11,26
+FN:2,System.Void BloggingApp.Domain.Entities.Post::.ctor(System.Guid,System.Guid,System.String,System.String,System.String)
+FNDA:11,System.Void BloggingApp.Domain.Entities.Post::.ctor(System.Guid,System.Guid,System.String,System.String,System.String)
+DA:3,11
+LF:7
+LH:7
+BRF:0
+BRH:0
+FNF:7
+FNH:7
+end_of_record
+SF:/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/Repositories/PostRepository.cs
+FN:30,System.Threading.Tasks.Task PostRepository::AddPostAsync(BloggingApp.Domain.Entities.Post)
+FNDA:4,System.Threading.Tasks.Task PostRepository::AddPostAsync(BloggingApp.Domain.Entities.Post)
+DA:31,4
+DA:33,4
+DA:34,4
+DA:35,1
+DA:36,1
+DA:37,1
+DA:38,4
+DA:39,4
+BRDA:34,30,0,1
+BRDA:34,30,1,4
+FN:7,System.Void PostRepository::.ctor(BloggingApp.Infrastructure.Data.BlogDBContext)
+FNDA:4,System.Void PostRepository::.ctor(BloggingApp.Infrastructure.Data.BlogDBContext)
+DA:8,4
+DA:9,4
+DA:10,4
+DA:11,4
+FN:12,System.Void PostRepository/<GetPostByIdAsync>d__2::MoveNext()
+FNDA:2,System.Void PostRepository/<GetPostByIdAsync>d__2::MoveNext()
+DA:13,2
+DA:15,2
+DA:16,2
+FN:18,System.Void PostRepository/<GetPostByIdWithAuthorDetailsAsync>d__3::MoveNext()
+FNDA:2,System.Void PostRepository/<GetPostByIdWithAuthorDetailsAsync>d__3::MoveNext()
+DA:19,2
+DA:21,2
+DA:22,2
+DA:23,2
+DA:24,1
+DA:25,1
+DA:26,1
+DA:27,2
+DA:28,2
+BRDA:22,216,0,0
+BRDA:22,216,1,2
+BRDA:23,380,0,2
+BRDA:23,380,1,0
+BRDA:23,398,0,1
+BRDA:23,398,1,2
+LF:24
+LH:24
+BRF:8
+BRH:6
+FNF:4
+FNH:4
+end_of_record
+SF:/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/Data/BlogDBContext.cs
+FN:16,Microsoft.EntityFrameworkCore.DbSet`1<BloggingApp.Domain.Entities.Post> BloggingApp.Infrastructure.Data.BlogDBContext::get_Posts()
+FNDA:12,Microsoft.EntityFrameworkCore.DbSet`1<BloggingApp.Domain.Entities.Post> BloggingApp.Infrastructure.Data.BlogDBContext::get_Posts()
+DA:17,12
+FN:17,Microsoft.EntityFrameworkCore.DbSet`1<BloggingApp.Domain.Entities.Author> BloggingApp.Infrastructure.Data.BlogDBContext::get_Authors()
+FNDA:7,Microsoft.EntityFrameworkCore.DbSet`1<BloggingApp.Domain.Entities.Author> BloggingApp.Infrastructure.Data.BlogDBContext::get_Authors()
+DA:18,7
+FN:8,System.Void BloggingApp.Infrastructure.Data.BlogDBContext::.ctor()
+FNDA:0,System.Void BloggingApp.Infrastructure.Data.BlogDBContext::.ctor()
+DA:9,0
+DA:10,0
+DA:11,0
+FN:12,System.Void BloggingApp.Infrastructure.Data.BlogDBContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<BloggingApp.Infrastructure.Data.BlogDBContext>)
+FNDA:4,System.Void BloggingApp.Infrastructure.Data.BlogDBContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<BloggingApp.Infrastructure.Data.BlogDBContext>)
+DA:13,4
+DA:14,4
+DA:15,4
+LF:8
+LH:5
+BRF:0
+BRH:0
+FNF:4
+FNH:3
+end_of_record
