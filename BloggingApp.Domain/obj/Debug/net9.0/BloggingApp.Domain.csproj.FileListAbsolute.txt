@@ -1,0 +1,11 @@
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Domain/bin/Debug/net9.0/BloggingApp.Domain.deps.json
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Domain/bin/Debug/net9.0/BloggingApp.Domain.dll
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Domain/bin/Debug/net9.0/BloggingApp.Domain.pdb
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Domain/obj/Debug/net9.0/BloggingApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Domain/obj/Debug/net9.0/BloggingApp.Domain.AssemblyInfoInputs.cache
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Domain/obj/Debug/net9.0/BloggingApp.Domain.AssemblyInfo.cs
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Domain/obj/Debug/net9.0/BloggingApp.Domain.csproj.CoreCompileInputs.cache
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Domain/obj/Debug/net9.0/BloggingApp.Domain.dll
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Domain/obj/Debug/net9.0/refint/BloggingApp.Domain.dll
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Domain/obj/Debug/net9.0/BloggingApp.Domain.pdb
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Domain/obj/Debug/net9.0/ref/BloggingApp.Domain.dll

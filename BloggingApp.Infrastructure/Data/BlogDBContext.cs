@@ -12,12 +12,6 @@ namespace BloggingApp.Infrastructure.Data
 
         public DbSet<Post> Posts { get; set; }
         public DbSet<Author> Authors { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Post>().ToTable("Posts");
-            modelBuilder.Entity<Author>().ToTable("Authors");
-        }
     }
 }
 

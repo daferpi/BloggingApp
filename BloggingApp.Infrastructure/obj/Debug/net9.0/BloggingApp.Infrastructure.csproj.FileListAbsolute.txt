@@ -1,0 +1,17 @@
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/bin/Debug/net9.0/BloggingApp.Infrastructure.deps.json
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/bin/Debug/net9.0/BloggingApp.Infrastructure.runtimeconfig.json
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/bin/Debug/net9.0/BloggingApp.Infrastructure.dll
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/bin/Debug/net9.0/BloggingApp.Infrastructure.pdb
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/bin/Debug/net9.0/BloggingApp.Domain.dll
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/bin/Debug/net9.0/BloggingApp.Domain.pdb
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/obj/Debug/net9.0/BloggingApp.Infrastructure.csproj.AssemblyReference.cache
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/obj/Debug/net9.0/BloggingApp.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/obj/Debug/net9.0/BloggingApp.Infrastructure.AssemblyInfoInputs.cache
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/obj/Debug/net9.0/BloggingApp.Infrastructure.AssemblyInfo.cs
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/obj/Debug/net9.0/BloggingApp.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/obj/Debug/net9.0/Blogging.E4ABC04B.Up2Date
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/obj/Debug/net9.0/BloggingApp.Infrastructure.dll
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/obj/Debug/net9.0/refint/BloggingApp.Infrastructure.dll
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/obj/Debug/net9.0/BloggingApp.Infrastructure.pdb
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/obj/Debug/net9.0/BloggingApp.Infrastructure.genruntimeconfig.cache
+/Users/abel.fernandez/projects/experiments/BloggingApp/BloggingApp.Infrastructure/obj/Debug/net9.0/ref/BloggingApp.Infrastructure.dll
