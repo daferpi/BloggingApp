@@ -16,14 +16,9 @@ public class PostService : IPostService
         return await _postRepository.GetPostByIdAsync(id);
     }
 
-    public async Task<IEnumerable<Post>> GetPostsByAuthorIdAsync(Guid authorId)
+    public async Task<Post?> GetPostByIdWithAuthorDetailsAsync(Guid id)
     {
-        return await _postRepository.GetPostsByAuthorIdAsync(authorId);
-    }
-
-    public async Task<IEnumerable<Post>> GetAllPostsAsync()
-    {
-        return await _postRepository.GetAllPostsAsync();
+        return await _postRepository.GetPostByIdWithAuthorDetailsAsync(id);
     }
 
     public async Task AddPostAsync(Post post)

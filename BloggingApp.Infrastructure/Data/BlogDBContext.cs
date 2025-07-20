@@ -6,6 +6,10 @@ namespace BloggingApp.Infrastructure.Data
 {
     public class BlogDBContext : DbContext
     {
+        public BlogDBContext()
+        {
+        }
+
         public BlogDBContext(DbContextOptions<BlogDBContext> options) : base(options)
         {
         }

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggingApp.Infrastructure"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggingApp.API", "BloggingApp.API\BloggingApp.API.csproj", "{E8BBE98B-DA5E-4621-9341-E0EEF998E5A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggingApp.Test", "BloggingApp.Test\BloggingApp.Test.csproj", "{BF9EFE16-8BEF-46C6-8051-758214EE31E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{E8BBE98B-DA5E-4621-9341-E0EEF998E5A8}.Release|x64.Build.0 = Release|Any CPU
 		{E8BBE98B-DA5E-4621-9341-E0EEF998E5A8}.Release|x86.ActiveCfg = Release|Any CPU
 		{E8BBE98B-DA5E-4621-9341-E0EEF998E5A8}.Release|x86.Build.0 = Release|Any CPU
+		{BF9EFE16-8BEF-46C6-8051-758214EE31E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF9EFE16-8BEF-46C6-8051-758214EE31E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF9EFE16-8BEF-46C6-8051-758214EE31E1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BF9EFE16-8BEF-46C6-8051-758214EE31E1}.Debug|x64.Build.0 = Debug|Any CPU
+		{BF9EFE16-8BEF-46C6-8051-758214EE31E1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BF9EFE16-8BEF-46C6-8051-758214EE31E1}.Debug|x86.Build.0 = Debug|Any CPU
+		{BF9EFE16-8BEF-46C6-8051-758214EE31E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF9EFE16-8BEF-46C6-8051-758214EE31E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF9EFE16-8BEF-46C6-8051-758214EE31E1}.Release|x64.ActiveCfg = Release|Any CPU
+		{BF9EFE16-8BEF-46C6-8051-758214EE31E1}.Release|x64.Build.0 = Release|Any CPU
+		{BF9EFE16-8BEF-46C6-8051-758214EE31E1}.Release|x86.ActiveCfg = Release|Any CPU
+		{BF9EFE16-8BEF-46C6-8051-758214EE31E1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -103,6 +103,19 @@ public class PostServiceTest
         Assert.Null(result.Author);
     }
 
+    [Fact]
+    public async Task AddPostAsync_ShouldAddPost_WhenPostIsValid()
+    {
+        // Arrange
+        var post = CreatePost(_postId, _authorId);
+        // Act
+        await _postService.AddPostAsync(post);
+        // Assert
+        var result = await _postService.GetPostByIdAsync(post.Id);
+        Assert.NotNull(result);
+        Assert.Equal(post.Id, result.Id);
+    }
+
      private Post CreatePost(Guid id = default, Guid authorId = default)
     {
         var post = new Post(id, authorId, "Test Title" + id, "Test Description" + id, "Test Content" + id);

@@ -24,21 +24,18 @@ public class BloggingController : ControllerBase
         return Ok(post);
     }
 
-    [HttpGet("posts/author/{authorId}")]
-    public async Task<IActionResult> GetPostsByAuthorId(Guid authorId)
+    [HttpGet("posts/{id}/author")]
+    public async Task<IActionResult> GetPostsByAuthorId(Guid id)
     {
-        var posts = await _postService.GetPostsByAuthorIdAsync(authorId);
-        return Ok(posts);
+        var post = await _postService.GetPostByIdWithAuthorDetailsAsync(id);
+        if (post == null)
+        {
+            return NotFound();
+        }
+        return Ok(post);
     }
-
-    [HttpGet("posts")]
-    public async Task<IActionResult> GetAllPosts()
-    {
-        var posts = await _postService.GetAllPostsAsync();
-        return Ok(posts);
-    }
-
-    [HttpPost("posts")]
+    
+    [HttpPost("post")]
     public async Task<IActionResult> AddPost([FromBody] AddPostRequest postRequest)
     { 
         if (postRequest == null || string.IsNullOrWhiteSpace(postRequest.Title) || string.IsNullOrWhiteSpace(postRequest.Content))
@@ -46,7 +43,12 @@ public class BloggingController : ControllerBase
             return BadRequest("Invalid post data.");
         }
 
-        var post = new Post(postRequest.AuthorId, postRequest.Title, postRequest.Description, postRequest.Content);
+        var post = new Post(Guid.NewGuid(), Guid.NewGuid(), postRequest.Title, postRequest.Description, postRequest.Content);
+        if (postRequest.AuthorName != null && postRequest.AuthorSurname != null)
+        {
+            post.Author = new Author(post.AuthorId, postRequest.AuthorName, postRequest.AuthorSurname);
+        }
+            
         await _postService.AddPostAsync(post);
         return CreatedAtAction(nameof(GetPostById), new { id = post.Id }, post);
     }

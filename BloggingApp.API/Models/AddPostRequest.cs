@@ -1,15 +1,21 @@
+using BloggingApp.Domain.Entities;
+
 public class AddPostRequest
-{
-    public Guid AuthorId { get; set; }
+{   
     public string Title { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
     public string Content { get; set; } = string.Empty;
+     public string? AuthorName { get; set; } = null;
+     public string? AuthorSurname { get; set; } = null;
 
-    public AddPostRequest(Guid authorId, string title, string description, string content)
+
+
+    public AddPostRequest(string title, string description, string content, string? authorName, string? authorSurname)
     {
-        AuthorId = authorId;
         Title = title;
         Description = description;
         Content = content;
+        AuthorName = authorName;
+        AuthorSurname = authorSurname;
     }
 }

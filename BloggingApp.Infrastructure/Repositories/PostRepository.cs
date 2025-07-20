@@ -15,22 +15,26 @@ public class PostRepository : IPostRepository
         return await _context.Posts.FindAsync(id);
     }
 
-    public Task<IEnumerable<Post>> GetPostsByAuthorIdAsync(Guid authorId)
+    public async Task<Post?> GetPostByIdWithAuthorDetailsAsync(Guid id)
     {
-        // Logic to retrieve posts by author ID
-        return Task.FromResult(_context.Posts.Where(p => p.AuthorId == authorId).AsEnumerable());
-    }
-
-    public Task<IEnumerable<Post>> GetAllPostsAsync()
-    {
-        // Logic to retrieve all posts
-        return Task.FromResult(_context.Posts.AsEnumerable());
+        // Logic to retrieve a post by ID
+        var post = await _context.Posts.FindAsync(id);
+        var author = await _context.Authors.FindAsync(post?.AuthorId);
+        if (post != null && author != null)
+        {
+           post.Author = author;
+        }
+        return post;
     }
 
     public Task AddPostAsync(Post post)
     {
         // Logic to add a new post
         _context.Posts.Add(post);
+        if (post.Author != null)
+        {
+            _context.Authors.Attach(post.Author);
+        }
         return _context.SaveChangesAsync();
     }
 }
